@@ -1,0 +1,23 @@
+   #include <stdio.h>
+    
+     int main() {
+        int n,k,key,a[100],l,i;
+        printf("Enter");
+        scanf("%d",&n);
+        while(l<=n){
+           printf("number of ip");
+           scanf("%d",&k);
+            for(i=0;i<k;i++){
+                 scanf("%d",&a[i]);
+             }
+             printf("enter key");
+             scanf("%d",&key);
+             for(i=0;i<k;i++){
+                 if(a[i]==key){
+                     printf("index==%d",i);
+                 }
+             }
+             l++;
+         }
+         return 0;
+     }
