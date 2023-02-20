@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int array[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int n = sizeof(array) / sizeof(array[0]);
+    int start = 0, end = sqrt(n);
+    int key = 10, i;
+    while (array[end] < key && end < n)
+    {
+        start = end;
+        end = end + sqrt(n);
+        if (end > n - 1)
+        {
+            end = n - 1;
+        }
+    }
+    for (i = start; i <= end; i++)
+    {
+        if (array[i] == key)
+        {
+            printf("%d", i);
+            return i;
+        }
+    }
+}
